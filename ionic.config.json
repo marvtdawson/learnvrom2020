@@ -1,0 +1,7 @@
+{
+  "name": "learnvrom2020",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
