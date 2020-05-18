@@ -1,20 +1,287 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+<!--suppress AngularUndefinedTag -->
+<ion-header>
+  <ion-navbar>
+    <ion-title class="title">
+      <img class="header_logo" src="{{ headerLogo }}" alt="">
+      Learn VROM
     </ion-title>
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="main-content">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <section class="jumbotron-header">
+    <ion-row>
+      <ion-col class="jumbotron-header__col-1">
+        <div class="jumbotron-header__col-1__text-wrapper">
+          <p>{{ valueProposition }}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </section>
+
+  <section class="how-we-help">
+    <ion-card-header>
+      <ion-card-subtitle class="section-headings">
+        <h1>How we help</h1>
+        <h5>Yeah we do those other things too!</h5>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card>
+      <ion-card-content class="how-we-help__content-wrapper">
+        <ion-col class="how-we-help__content-wrapper__col">
+          <i class="fas fa-tools fa-7x"></i>
+          <div>
+            <h3 class="how-we-help__content-wrapper__col__title">Customer Service</h3>
+            <p>Assign, track and confirm tenant's service requests.</p>
+          </div>
+        </ion-col>
+        <ion-col class="how-we-help__content-wrapper__col">
+          <i class="fas fa-comments fa-7x"></i>
+          <div>
+            <h3>Communicate</h3>
+            <p>Expedite office and tenant communications.</p>
+          </div>
+        </ion-col>
+        <ion-col class="how-we-help__content-wrapper__col">
+          <i class="fas fa-file-alt fa-7x"></i>
+          <div>
+            <h3>Application</h3>
+            <p>Register New Tenants Online</p>
+          </div>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+  </section>
+
+  <section class="value-perception">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle class="section-headings">
+          <h1>Increase Your Tenant's Customer Service Satisfaction Perception</h1>
+          <h5>VROM is the AFFORDABLE customer service infrastructure your rental property needs.</h5>
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content class="value-perception__content-wrapper">
+        <ion-col class="value-perception__content-wrapper__col-1">
+          <div>
+            <h3 class="heading-tertiary">
+              Your tenant's perception of your rental property is PRICELE$$!
+            </h3>
+            <p class="paragraph">
+              Increase customer service satisfaction,
+              by monitoring how well your team respond & perform to a tenant's request.<br/><br/>
+            </p>
+            <p class="paragraph">Providing a higher level of customer service & new features builds
+              perception.</p>
+          </div>
+        </ion-col>
+        <ion-col class="value-perception__content-wrapper__col-2">
+          <div>
+            <ion-img [src]="customerSatisfactionImage"></ion-img>
+          </div>
+
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+  </section>
+
+  <section class="green-communication">
+    <ion-card-header>
+      <ion-card-subtitle class="section-headings">
+        <h1>Go <span class="green-text">GREEN</span> Send Notifications</h1>
+        <h5>Save <span class="green-text">trees</span> & communicate instantly</h5>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card>
+      <ion-card-content class="green-communication__content-wrapper">
+        <ion-row class="green-communication__content-wrapper__row-1">
+          <ion-col class="green-communication__content-wrapper__row-1__col-1 composition">
+            <img src="/assets/imgs/messages/pest_control.jpg" alt="Photo 1"
+                 class="composition__photo composition__photo--p1 img-1">
+            <img src="/assets/imgs/messages/preventative_maintenance.jpg" alt="Photo 2"
+                 class="composition__photo composition__photo--p2 img-2">
+            <img src="/assets/imgs/messages/rent_reminder.jpg" alt="Photo 3"
+                 class="composition__photo composition__photo--p3 img-3">
+          </ion-col>
+          <ion-col class="green-communication_content-wrapper__row-1__col-2">
+            <div class="col-1-of-2">
+              <h3 class="heading-tertiary u-margin-bottom-small">SAVE Money & Time</h3>
+              <p>
+                Who has time to print, cut and hand deliver notices?
+                Do you even know if the notices actually got delivered?
+              </p>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">Increase Customer Service Response
+                Time</h3>
+              <p>
+                When they press send, you respond instantly.
+              </p>
+              <a href="#" class="btn-text">Learn More &rarr;</a>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </section>
+
+  <section class="founding-member">
+    <ion-card-header>
+      <ion-card-subtitle class="section-headings">
+        <h1>Become A Founding Member, Get Early Access</h1>
+        <h3>Join for FREE!</h3>
+        <h5>+Founding members receive special life-time pricing per location.</h5>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card>
+      <ion-card-content class="founding-member__content-wrapper">
+        <ion-col class="founding-member__content-wrapper__col-1">
+          <button class="btn founding-member__content-wrapper__col-1__btn" (click)="openFMLModal()">
+            Sign Up To Get Early Access
+          </button>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+  </section>
+
+  <section class="parking">
+    <ion-card-header>
+      <ion-card-subtitle class="section-headings">
+        <h1>Parking</h1>
+        <h3>Partner With VROM and Increase Revenue</h3>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row class="services__text-wrapper">
+            <ion-col class="services__text-wrapper__text">
+              <ion-icon title="Requests" name="medkit"></ion-icon>
+              Requests
+            </ion-col>
+            <ion-col class="services__text-wrapper__text">
+              <ion-icon title="Tracking" name="filing"></ion-icon>
+              Tasks
+            </ion-col>
+            <ion-col class="services__text-wrapper__text">
+              <ion-icon title="Service Rating" name="stats"></ion-icon>
+              Rating
+            </ion-col>
+            <ion-col class="services__text-wrapper__text">
+              <ion-icon title="Contractors" name="construct"></ion-icon>
+              Contractors
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </section>
+
+  <section class="laundry">
+    <ion-card-header>
+      <ion-card-subtitle class="section-headings">
+        <h1>Laundry</h1>
+        <h3>Managing The Seen & Unforeseen</h3>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card>
+      <ion-card-content class="features__content">
+        <p>
+          "This is where the features might go but for now I am just typing some text.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+          et
+          dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
+          laborum."
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </section>
+
+  <section class="footer">
+    <ion-grid class="footer__cta-wrapper">
+      <ion-row class="footer__cta-wrapper__value-proposition">
+        <h2>{{ valuePropositionFooter }}</h2>
+        <!--h2>Get VROM Gather Data & Get Results!</h2-->
+      </ion-row>
+      <ion-row class="footer__cta-wrapper__cta-form">
+        <!--ion-col><div class="footer__cta-wrapper__cta-form__title">Get Early Access</div></ion-col-->
+        <!--ion-col>
+          <div>
+            <ion-item lines="none">
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="email"></ion-input>
+            </ion-item>
+          </div>
+        </ion-col-->
+        <ion-col>
+          <button class="btn footer__cta-wrapper__cta-form__btn" (click)="openFMLModal()">Sign Up To Get Early Access</button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="footer__wrapper">
+        <ion-col>
+          <div class="footer__wrapper__nav-subdiv">
+            <h2>Contact</h2>
+            <p class="footer__wrapper__nav-subdiv__contact-text">info@getvrom.com</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="footer__wrapper__nav-subdiv">
+            <h2>Location</h2>
+            <p class="footer__wrapper__nav-subdiv__contact-text">
+              1050 N HWY 360 & Lamar
+              Suite: B3021
+              Dallas, TX 75050
+            </p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="footer__wrapper__nav-subdiv">
+            <h2>Phone number</h2>
+            <p class="footer__wrapper__nav-subdiv__contact-text">682-777-8866</p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="footer__social-icons-wrapper">
+        <ion-col class="footer__social-icons-wrapper__box">
+          <a href="https://www.facebook.com/whoslaundry09" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </ion-col>
+        <ion-col class="footer__social-icons-wrapper__box">
+          <a href="https://www.linkedin.com/in/getvrom09" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </ion-col>
+        <ion-col class="footer__social-icons-wrapper__box">
+          <a href="https://twitter.com/getvrom09" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </ion-col>
+        <ion-col class="footer__social-icons-wrapper__box">
+          <a href="https://www.instagram.com/getvrom09/" target="_blank">
+            <i class="fab fa-instagram fa-1x"></i>
+          </a>
+        </ion-col>
+      </ion-row>
+      <ion-row class="footer__site-info-wrapper">
+        <div class="footer__site-info">
+          <ion-col>
+            <div class="footer__site-info__content">
+              &copy; {{ date }} {{ siteFooterName }}
+              <p>ALL RIGHTS RESERVED</p>
+            </div>
+          </ion-col>
+        </div>
+      </ion-row>
+    </ion-grid>
+  </section>
+
 </ion-content>
+
